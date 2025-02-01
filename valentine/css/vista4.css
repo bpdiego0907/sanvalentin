@@ -1,0 +1,134 @@
+/* sanvalentin.css: Estilos para la vista de San Valentín */
+
+/* Reinicio general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Fondo y tipografía global */
+  body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 60px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  
+  /* Título */
+  .container h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #e91e63;
+    margin-bottom: 20px;
+  }
+  
+  /* Párrafo descriptivo */
+  .container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  
+  /* Contenedor de botones */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Botones generales */
+  .btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Botón "Sí" */
+  .yes {
+    background-color: #e91e63;
+    color: #fff;
+  }
+  
+  .yes:hover {
+    background-color: #ad1457;
+    transform: scale(1.05);
+  }
+  
+  /* Botón "No" */
+  .no {
+    background-color: #fff;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    /* Se establece una posición inicial; el script lo moverá después */
+    position: fixed;
+    left: 20px;
+    top: 20px;
+  }
+  
+  .no:hover {
+    background-color: #fce4ec;
+    transform: scale(1.05);
+  }
+  
+  /* Botón de Retroceder */
+  .vista4-back-button {
+    position: fixed;
+    bottom: 20px;
+    padding: 12px 25px;
+    background-color: #e91e63;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Posicionamiento específico */
+  .vista4-back-button {
+    left: 20px;
+  }
+
+  /* Efecto hover para ambos botones */
+  .vista4-back-button:hover {
+    background-color: #ad1457;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .container {
+      padding: 30px 20px;
+    }
+    .container h1 {
+      font-size: 2.5rem;
+    }
+    .container p {
+      font-size: 1rem;
+    }
+    .btn, .vista4-back-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+    /* Ajuste opcional para pantallas muy pequeñas */
+    .vista4-back-button {
+      bottom: 10px;
+      left: 10px;
+    }
+  }
+  

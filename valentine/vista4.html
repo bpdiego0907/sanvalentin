@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Quieres ser mi San Valentín?</title>
+  <!-- Fuente para el título -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="css/vista4.css">
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ ¿Quieres ser mi San Valentín? ❤️</h1>
+    <p>Si dices que no, me mato<br>¿Aceptas mi invitación?</p>
+    <div class="buttons">
+      <div class="buttons">
+        <!-- Aquí se cambió el href para que dirija a vista5.html -->
+        <a href="vista5.html" class="btn yes">¡Sí, claro!</a>
+        <a href="#" class="btn no">Ahí nomás</a>
+      </div>
+    </div>
+    <a href="vista3.html" class="vista4-back-button">RETROCEDER</a>
+  </div>
+
+  <!-- Script para mover el botón "Ahí nomás" a una posición aleatoria -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const noButton = document.querySelector(".btn.no");
+
+      // Forzamos que el botón tenga posición fija para poder moverlo por la pantalla
+      noButton.style.position = "fixed";
+      
+      noButton.addEventListener("mouseover", function() {
+        // Calculamos el máximo valor permitido para left y top
+        const maxX = window.innerWidth - noButton.offsetWidth;
+        const maxY = window.innerHeight - noButton.offsetHeight;
+        // Generamos valores aleatorios dentro de esos límites
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+        // Asignamos los nuevos valores al botón
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+      });
+    });
+  </script>
+</body>
+</html>
